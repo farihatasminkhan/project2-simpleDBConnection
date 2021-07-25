@@ -9,7 +9,8 @@ $uname = $_POST ['uname'];
 $passwd = $_POST['passwd'];
 
 //to prevent mysql injection
-//$passwd = stripcslashes($passwd);
+//$uname = stripslashes($uname);
+//$passwd = stripslashes($passwd);
 //$uname = new mysqli($uname);
 //$passwd = new mysqli($password);
 
@@ -19,6 +20,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
 
 $sql = "INSERT INTO login (username, password) VALUES ($uname, $passwd)";
 
