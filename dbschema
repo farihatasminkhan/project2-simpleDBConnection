@@ -1,0 +1,6 @@
+CREATE TABLE p2_registration.registration (
+                          id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+                          name VARCHAR(30) NOT NULL,
+                          nid VARCHAR(30) NOT NULL,
+                          age INT(3) NOT NULL
+)
