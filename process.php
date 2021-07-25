@@ -22,7 +22,7 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "INSERT INTO login (username, password) VALUES ($uname, $passwd)";
+$sql = "INSERT INTO login (username, password) VALUES ('$uname','$passwd')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Login Successful";
